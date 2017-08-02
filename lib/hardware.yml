@@ -1,0 +1,16 @@
+iphone_7:  
+  deviceType: 'iphone'
+  ios: 10
+  udid:  ''
+iphone_6: 
+  deviceType: 'iphone'
+  ios: 9
+  udid:  ''
+ipad_air: 
+  deviceType: 'ipad'
+  ios: 10
+  udid:  ''
+ipad_pro: 
+  deviceType: 'ipad'
+  ios: 8
+  udid:  ''
