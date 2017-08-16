@@ -12,14 +12,14 @@ module Common_Methods
   	end
   	
 	def element(xpath)
-        return $appium_driver.find_element(:xpath, xpath)
+        return $driver.find_element(:xpath, xpath)
         true
     rescue Selenium::WebDriver::Error::NoSuchElementError
         false
     end
     
     def element_visible?(xpath)
-        return $appium_driver.find_element(:xpath, xpath).displayed?
+        return $driver.find_element(:xpath, xpath).displayed?
         true
     rescue Selenium::WebDriver::Error::NoSuchElementError
         false
@@ -33,7 +33,7 @@ module Common_Methods
     end
     
     def element_not_present?(xpath)
-        return expect($appium_driver.find_element(:xpath, xpath)).to be_falsey
+        return expect($driver.find_element(:xpath, xpath)).to be_falsey
         true
     rescue Selenium::WebDriver::Error::NoSuchElementError
         false
@@ -41,7 +41,7 @@ module Common_Methods
     
     def general_alert_check
 		if element_visible?("//UIAAlert") #just a general alert check
-			$appium_driver.alert_accept
+			$driver.alert_accept
 		end
 	end
 	
