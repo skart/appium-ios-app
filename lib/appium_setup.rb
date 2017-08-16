@@ -84,7 +84,6 @@ require 'shellwords'
   		end
 		$driver = Appium::Driver.new(caps: desired_caps).start_driver  ##launch app
 		Appium.promote_appium_methods Object
-		$driver.get(http://google.com)
 	end
 	
 	def app_teardown
